@@ -118,7 +118,7 @@
       z-index: 100;
       background: var(--bg);
       padding-top: 2.5rem;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0;
     }
 
     .sticky-top.scrolled {
@@ -291,6 +291,16 @@
       margin: 0;
     }
 
+    #teaching .collapsible-header,
+    #honors .awards-list .collapsible-header {
+      display: block;
+    }
+
+    .inline-muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
     .pub-venue,
     .status-pill {
       margin-left: auto;
@@ -350,7 +360,7 @@
 
       .sticky-top {
         padding-top: 1.2rem;
-        padding-bottom: 0.3rem;
+        padding-bottom: 0;
       }
 
       .header {
@@ -487,9 +497,7 @@
     <div class="header-left">
       <h1>Sameer Mehta</h1>
       <div class="subtitle">
-        Associate Professor at
-        <a href="https://www.rsm.nl/people/sameer-mehta" target="_blank" rel="noopener">Rotterdam School of Management</a>,
-        Erasmus University
+        Associate Professor at Rotterdam School of Management, Erasmus University
       </div>
     </div>
     <img
@@ -516,6 +524,9 @@
   <!-- ── About ─────────────────────────────────────────── -->
 
   <section id="about" class="tab-section active">
+    <p>
+      I am an <a href="https://www.rsm.nl/people/sameer-mehta" target="_blank" rel="noopener">Associate Professor</a> in the Department of Technology and Operations Management at Rotterdam School of Management, Erasmus University.
+    </p>
     <p>
       My research investigates the governance challenges and strategic dynamics that shape modern data markets. I use quantitative methods such as mechanism design, optimization, and cooperative and non-cooperative game theory to study the operational and economic questions that emerge in this domain.
     </p>
@@ -643,44 +654,36 @@
     <h3>Erasmus University</h3>
     <ul class="collapsible">
       <li>
-        <div class="collapsible-header">Introduction to Mechanism Design</div>
-        <p class="coauthor-line">doctoral</p>
+        <div class="collapsible-header">Introduction to Mechanism Design <span class="inline-muted">&thinsp;·&thinsp; doctoral</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Big Data Management and Analytics</div>
-        <p class="coauthor-line">master's</p>
+        <div class="collapsible-header">Big Data Management and Analytics <span class="inline-muted">&thinsp;·&thinsp; master's</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Data Privacy and Cybersecurity</div>
-        <p class="coauthor-line">master's</p>
+        <div class="collapsible-header">Data Privacy and Cybersecurity <span class="inline-muted">&thinsp;·&thinsp; master's</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Business Analytics for International Managers</div>
-        <p class="coauthor-line">master's</p>
+        <div class="collapsible-header">Business Analytics for International Managers <span class="inline-muted">&thinsp;·&thinsp; master's</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Digital Analytics and Customer Insights</div>
-        <p class="coauthor-line">executive</p>
+        <div class="collapsible-header">Digital Analytics and Customer Insights <span class="inline-muted">&thinsp;·&thinsp; executive</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Data Modelling &amp; Analytics</div>
-        <p class="coauthor-line">bachelor's</p>
+        <div class="collapsible-header">Data Modelling &amp; Analytics <span class="inline-muted">&thinsp;·&thinsp; bachelor's</span></div>
       </li>
     </ul>
 
     <h3>University of Illinois at Urbana-Champaign</h3>
     <ul class="collapsible">
       <li>
-        <div class="collapsible-header">Social Media Strategy</div>
-        <p class="coauthor-line">bachelor's</p>
+        <div class="collapsible-header">Social Media Strategy <span class="inline-muted">&thinsp;·&thinsp; bachelor's</span></div>
       </li>
     </ul>
 
     <h3>University of Texas at Dallas</h3>
     <ul class="collapsible">
       <li>
-        <div class="collapsible-header">Introduction to Programming</div>
-        <p class="coauthor-line">bachelor's</p>
+        <div class="collapsible-header">Introduction to Programming <span class="inline-muted">&thinsp;·&thinsp; bachelor's</span></div>
       </li>
     </ul>
   </section>
@@ -705,42 +708,33 @@
     </ul>
 
     <h3>Awards</h3>
-    <ul class="collapsible">
+    <ul class="collapsible awards-list">
       <li>
-        <div class="collapsible-header">ERIM Outstanding Performance by a Young Researcher Award</div>
-        <p class="coauthor-line">Erasmus University &thinsp;·&thinsp; 2022</p>
+        <div class="collapsible-header">ERIM Outstanding Performance by a Young Researcher Award <span class="inline-muted">&thinsp;·&thinsp; Erasmus University &thinsp;·&thinsp; 2022</span></div>
       </li>
       <li>
-        <div class="collapsible-header">ERIM High Performance Membership</div>
-        <p class="coauthor-line">Erasmus University &thinsp;·&thinsp; 2021–Present</p>
+        <div class="collapsible-header">ERIM High Performance Membership <span class="inline-muted">&thinsp;·&thinsp; Erasmus University &thinsp;·&thinsp; 2021–Present</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Best Dissertation Award</div>
-        <p class="coauthor-line">The University of Texas at Dallas &thinsp;·&thinsp; 2021</p>
+        <div class="collapsible-header">Best Dissertation Award <span class="inline-muted">&thinsp;·&thinsp; The University of Texas at Dallas &thinsp;·&thinsp; 2021</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Runner-up, Nunamaker-Chen Dissertation Award</div>
-        <p class="coauthor-line">Information Systems Society, INFORMS &thinsp;·&thinsp; 2020</p>
+        <div class="collapsible-header">Runner-up, Nunamaker-Chen Dissertation Award <span class="inline-muted">&thinsp;·&thinsp; Information Systems Society, INFORMS &thinsp;·&thinsp; 2020</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Teachers Ranked as Excellent</div>
-        <p class="coauthor-line">University of Illinois at Urbana-Champaign &thinsp;·&thinsp; Fall 2020</p>
+        <div class="collapsible-header">Teachers Ranked as Excellent <span class="inline-muted">&thinsp;·&thinsp; University of Illinois at Urbana-Champaign &thinsp;·&thinsp; Fall 2020</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Recipient of INSPIRE Scholarship</div>
-        <p class="coauthor-line">IIT Kanpur &thinsp;·&thinsp; 2008–12</p>
+        <div class="collapsible-header">Recipient of INSPIRE Scholarship <span class="inline-muted">&thinsp;·&thinsp; IIT Kanpur &thinsp;·&thinsp; 2008–12</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Ranked 13th in Regional Mathematics Olympiad</div>
-        <p class="coauthor-line">National Board for Higher Mathematics, India &thinsp;·&thinsp; 2006</p>
+        <div class="collapsible-header">Ranked 13th in Regional Mathematics Olympiad <span class="inline-muted">&thinsp;·&thinsp; National Board for Higher Mathematics, India &thinsp;·&thinsp; 2006</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Ranked in top 1% in Physics Olympiad</div>
-        <p class="coauthor-line">Indian Association of Physics Teachers, India &thinsp;·&thinsp; 2006</p>
+        <div class="collapsible-header">Ranked in top 1% in Physics Olympiad <span class="inline-muted">&thinsp;·&thinsp; Indian Association of Physics Teachers, India &thinsp;·&thinsp; 2006</span></div>
       </li>
       <li>
-        <div class="collapsible-header">Recipient of the National Talent Search Scholarship</div>
-        <p class="coauthor-line">NCERT, India &thinsp;·&thinsp; 2005–08</p>
+        <div class="collapsible-header">Recipient of the National Talent Search Scholarship <span class="inline-muted">&thinsp;·&thinsp; NCERT, India &thinsp;·&thinsp; 2005–08</span></div>
       </li>
     </ul>
   </section>
