@@ -328,6 +328,40 @@
 <a id="back-to-top" href="#" aria-label="Back to top">&uarr;</a>
 
 <script>
+  function trackEvent(eventName, parameters) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, Object.assign({
+        transport_type: 'beacon'
+      }, parameters));
+    }
+  }
+
+  function activeSectionFor(element) {
+    const section = element.closest('.tab-section');
+    if (section) {
+      return section.id;
+    }
+
+    const activeSection = document.querySelector('.tab-section.active');
+    return activeSection ? activeSection.id : 'header';
+  }
+
+  function listItemTitleFor(link) {
+    const item = link.closest('li');
+    const header = item ? item.querySelector('.collapsible-header') : null;
+
+    if (!header) {
+      return '';
+    }
+
+    const headerCopy = header.cloneNode(true);
+    headerCopy.querySelectorAll('.pub-venue, .status-pill, .inline-muted').forEach(function(meta) {
+      meta.remove();
+    });
+
+    return headerCopy.textContent.replace(/\s+/g, ' ').trim();
+  }
+
   // Tab switching
   const tabs = document.querySelectorAll('.tab-nav .tab');
   const sections = document.querySelectorAll('.tab-section');
@@ -349,6 +383,40 @@
       document.documentElement.style.scrollBehavior = 'auto';
       window.scrollTo(0, 0);
       document.documentElement.style.scrollBehavior = '';
+
+      trackEvent('tab_click', {
+        tab_name: target
+      });
+    });
+  });
+
+  // Analytics for outbound/profile/research link clicks
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const linkText = link.textContent.replace(/\s+/g, ' ').trim();
+      const section = activeSectionFor(link);
+
+      trackEvent('outbound_link_click', {
+        link_url: link.href,
+        link_text: linkText,
+        section: section
+      });
+
+      if (link.hostname === 'scholar.google.com' || link.href.includes('/people/sameer-mehta')) {
+        trackEvent('profile_link_click', {
+          profile_type: link.hostname === 'scholar.google.com' ? 'google_scholar' : 'rsm',
+          link_url: link.href,
+          section: section
+        });
+      }
+
+      if (section === 'research' && /^\[(preprint|doi)\]$/i.test(linkText)) {
+        trackEvent('paper_link_click', {
+          paper_title: listItemTitleFor(link),
+          link_type: linkText.replace(/[\[\]]/g, '').toLowerCase(),
+          link_url: link.href
+        });
+      }
     });
   });
 
