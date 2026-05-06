@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Mehta — Associate Professor, Rotterdam School of Management</title>
+  <meta name="description" content="Sameer Mehta is an Associate Professor at Rotterdam School of Management, Erasmus University. Research in data markets, mechanism design, game theory, and platform governance.">
+  <meta name="author" content="Sameer Mehta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sameermehta.me/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sameer Mehta — Associate Professor, Rotterdam School of Management">
+  <meta property="og:description" content="Sameer Mehta is an Associate Professor at Rotterdam School of Management, Erasmus University. Research in data markets, mechanism design, game theory, and platform governance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sameermehta.me/">
+  <meta property="og:image" content="https://sameermehta.me/images/sm_profile_pic.jpeg">
+  <meta property="og:image:alt" content="Sameer Mehta">
+  <meta property="og:site_name" content="Sameer Mehta">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sameer Mehta — Associate Professor, Rotterdam School of Management">
+  <meta name="twitter:description" content="Sameer Mehta is an Associate Professor at Rotterdam School of Management, Erasmus University. Research in data markets, mechanism design, game theory, and platform governance.">
+  <meta name="twitter:image" content="https://sameermehta.me/images/sm_profile_pic.jpeg">
+  <meta name="twitter:image:alt" content="Sameer Mehta">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #fcfcfc;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --accent: #2b6cb0;
+      --accent-hover: #1a4f8a;
+      --border: #e5e5e5;
+      --border-light: #f0f0f0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 17.5px;
+    }
+
+    body {
+      font-family: Charter, 'Bitstream Charter', Georgia, serif;
+      font-weight: 500;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    /* ── Header ───────────────────── */
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .header-left h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+
+    .header-left .subtitle {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .header-left .subtitle a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .header-left .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-photo {
+      width: 156px;
+      height: 180px;
+      border-radius: 5px;
+      object-fit: contain;
+      flex-shrink: 0;
+      position: absolute;
+      top: -1.8rem;
+      right: 1.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* ── Sticky top ──────────────── */
+
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      padding-top: 2.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .sticky-top.scrolled {
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+
+    /* ── Tab navigation ──────────── */
+
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      border-bottom: 1.5px solid var(--border);
+      margin-top: 2.2rem;
+    }
+
+    .tab-nav button {
+      background: none;
+      border: none;
+      padding: 0.55rem 1.3rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1.5px;
+      transition: color 0.15s, border-color 0.15s;
+      letter-spacing: 0.03em;
+    }
+
+    .tab-nav button:focus {
+      outline: none;
+    }
+
+    .tab-nav button:hover {
+      color: var(--text);
+      border-bottom-color: var(--border);
+    }
+
+    .tab-nav button.active {
+      color: var(--text);
+      border-bottom-color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ── Tab content ─────────────── */
+
+    .tab-content {
+      padding-top: 2rem;
+    }
+
+    .tab-section {
+      display: none;
+    }
+
+    .tab-section.active {
+      display: block;
+    }
+
+    /* ── Sections ─────────────────── */
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid var(--text);
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 1.2rem 0 0.5rem;
+      padding-left: 0.6rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      text-align: justify;
+    }
+
+    p.note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    p.note code {
+      font-size: 0.85rem;
+    }
+
+    p.scholar-link {
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    section ul {
+      padding-left: 0.8rem;
+      list-style: disc;
+      margin-bottom: 0.5rem;
+    }
+
+    section ul li {
+      margin-bottom: 0.35rem;
+    }
+
+    section ul li::marker {
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* ── Collapsible list ─────────── */
+
+    .collapsible {
+      list-style: none;
+      padding-left: 0.8rem;
+    }
+
+    .collapsible li {
+      border-bottom: 1px solid var(--border-light);
+      list-style: disc;
+      padding-bottom: 0.12rem;
+    }
+
+    .collapsible li::marker {
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .collapsible li:first-child {
+      border-top: 1px solid var(--border-light);
+    }
+
+    .collapsible-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.45rem 0;
+      user-select: none;
+    }
+
+    .coauthor-line {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 0.1rem 0 0.1rem 1.6rem;
+      margin: 0;
+    }
+
+    .pub-venue,
+    .status-pill {
+      margin-left: auto;
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    .pub-venue {
+      color: var(--text-muted);
+      background: var(--border-light);
+    }
+
+    .status-pill {
+      color: var(--accent);
+      background: #e8f0fa;
+    }
+
+    /* ── Back to top ──────────────── */
+
+    #back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      display: none;
+      width: 40px;
+      height: 40px;
+      background: var(--text);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    #back-to-top:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ───────────────── */
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+
+      main {
+        padding: 0 1rem 2rem;
+      }
+
+      .sticky-top {
+        padding-top: 1.2rem;
+        padding-bottom: 0.3rem;
+      }
+
+      .header {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .tab-nav {
+        margin-top: 0.8rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .tab-nav button {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 0.45rem 0.55rem;
+        font-size: 0.85rem;
+      }
+
+      .collapsible-header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0.35rem 0.5rem;
+      }
+
+      .pub-venue,
+      .status-pill {
+        margin-left: 0;
+        white-space: normal;
+      }
+
+      .coauthor-line {
+        padding-left: 1rem;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      .profile-photo {
+        position: static;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .header-left h1 {
+        font-size: 1.5rem;
+      }
+
+      #back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 1rem;
+      }
+    }
+
+    @media print {
+      .sticky-top {
+        position: static;
+        box-shadow: none;
+      }
+      .tab-nav {
+        display: none;
+      }
+      .tab-section {
+        display: block !important;
+      }
+      #back-to-top { display: none !important; }
+      body { font-size: 12px; }
+      main { max-width: 100%; padding: 0; }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sameer Mehta",
+    "givenName": "Sameer",
+    "familyName": "Mehta",
+    "url": "https://sameermehta.me/",
+    "image": "https://sameermehta.me/images/sm_profile_pic.jpeg",
+    "jobTitle": "Associate Professor",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Rotterdam School of Management, Erasmus University",
+      "url": "https://www.rsm.nl/"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Texas at Dallas"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Kanpur"
+      }
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=6mWQXQEAAAAJ",
+      "https://www.rsm.nl/people/sameer-mehta"
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GMXZDKHTQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7GMXZDKHTQ');
+  </script>
+</head>
+<body>
+
+<main>
+
+  <!-- ── Sticky Header + Tabs ──────────────────────────── -->
+
+  <div class="sticky-top">
+
+    <div class="header">
+    <div class="header-left">
+      <h1>Sameer Mehta</h1>
+      <div class="subtitle">
+        Associate Professor at
+        <a href="https://www.rsm.nl/people/sameer-mehta" target="_blank" rel="noopener">Rotterdam School of Management</a>,
+        Erasmus University
+      </div>
+    </div>
+    <img
+      class="profile-photo"
+      src="images/sm_profile_pic.jpeg"
+      alt="Sameer Mehta"
+      width="156" height="180"
+    >
+    </div>
+
+    <nav class="tab-nav">
+      <button class="tab active" data-tab="about">About me</button>
+      <button class="tab" data-tab="research">Research</button>
+      <button class="tab" data-tab="teaching">Teaching</button>
+      <button class="tab" data-tab="honors">Honors</button>
+    </nav>
+
+  </div>
+
+  <!-- ── Tab Content ────────────────────────────────────── -->
+
+  <div class="tab-content">
+
+  <!-- ── About ─────────────────────────────────────────── -->
+
+  <section id="about" class="tab-section active">
+    <p>
+      My research investigates the governance challenges and strategic dynamics that shape modern data markets. I use quantitative methods such as mechanism design, optimization, and cooperative and non-cooperative game theory to study the operational and economic questions that emerge in this domain.
+    </p>
+    <p>
+      Previously, I was an Assistant Professor at the Gies College of Business, University of Illinois at Urbana-Champaign. I received my Ph.D. in Management Science from The University of Texas at Dallas and my M.Sc. (Integrated) in Mathematics and Scientific Computing from the Indian Institute of Technology Kanpur.
+    </p>
+    <p>
+      I currently serve as an Associate Editor at <em>Information Systems Research</em>.
+    </p>
+    <p class="note">
+      Email: <code>mehta [AT] rsm [DOT] nl</code>
+    </p>
+  </section>
+
+  <!-- ── Research ──────────────────────────────────────── -->
+
+  <section id="research" class="tab-section">
+    <p class="scholar-link">
+      <a href="https://scholar.google.com/citations?user=6mWQXQEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
+    </p>
+
+    <!-- Working Papers -->
+    <h3>Working Papers / Work in Progress</h3>
+    <ul class="collapsible" id="working-papers">
+      <li>
+        <div class="collapsible-header">
+          Pay With Your Data: Optimal Data-Sharing Mechanisms for AI Services <span class="status-pill">Under 2nd-round review</span>
+        </div>
+        <p class="coauthor-line">with Chandrasekhar Manchiraju, Milind Dawande, and Ganesh Janakiraman &thinsp;·&thinsp; <a href="https://www.ssrn.com/abstract=4552550" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Hit the GAS: Designing Optimal Generalized Ad-supported Subscription Mechanisms <span class="status-pill">Conditionally accepted</span>
+        </div>
+        <p class="coauthor-line">with Dominik Gutt and Martin Quinn &thinsp;·&thinsp; <a href="https://www.ssrn.com/abstract=5350556" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Exchangeability as the Exact Condition for Shapley Symmetry <span class="status-pill">Under 1st-round review</span>
+        </div>
+        <p class="coauthor-line"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5402195" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+    </ul>
+
+    <!-- Journal Publications -->
+    <h3>Journal Publications</h3>
+    <ul class="collapsible" id="publications">
+      <li>
+        <div class="collapsible-header">
+          Robin Hood to the Rescue: Sustainable Revenue-Allocation Schemes for Data Cooperatives <span class="pub-venue">POM</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande and Liying Mu &thinsp;·&thinsp; <a href="https://doi.org/10.1111/poms.13995" target="_blank" rel="noopener">[doi]</a> <a href="https://www.ssrn.com/abstract=4020556" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          An Approximation Scheme for Data Monetization <span class="pub-venue">POM</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande, Ganesh Janakiraman, and Vijay Mookerjee &thinsp;·&thinsp; <a href="https://doi.org/10.1111/poms.13676" target="_blank" rel="noopener">[doi]</a> <a href="https://www.ssrn.com/abstract=3808875" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Optimal Scale-Up of HIV Treatment Programs in Resource-Limited Settings Under Supply Uncertainty <span class="pub-venue">POM</span>
+        </div>
+        <p class="coauthor-line">with Sarang Deo and Charles J. Corbett &thinsp;·&thinsp; Lead article &thinsp;·&thinsp; <a href="https://doi.org/10.1111/poms.13613" target="_blank" rel="noopener">[doi]</a> <a href="https://www.ssrn.com/abstract=3087685" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          How to Sell a Dataset? Pricing Policies for Data Monetization <span class="pub-venue">ISR, EC'19</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande, Ganesh Janakiraman, and Vijay Mookerjee &thinsp;·&thinsp; <a href="https://doi.org/10.1287/isre.2021.1027" target="_blank" rel="noopener">[doi]</a> <a href="https://www.ssrn.com/abstract=3333296" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Sustaining a Good Impression: Mechanisms for Selling Partitioned Impressions at Ad-Exchanges <span class="pub-venue">ISR</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande, Ganesh Janakiraman, and Vijay Mookerjee &thinsp;·&thinsp; <a href="https://doi.org/10.1287/isre.2019.0878" target="_blank" rel="noopener">[doi]</a> <a href="https://www.ssrn.com/abstract=3064299" target="_blank" rel="noopener">[preprint]</a></p>
+      </li>
+    </ul>
+
+    <!-- Managerial / Policy Articles -->
+    <h3>Managerial / Policy Articles</h3>
+    <ul class="collapsible" id="policy-articles">
+      <li>
+        <div class="collapsible-header">
+          The Hidden Risks of URL-Shortening in Scientific Review <span class="pub-venue">Blog @ Communications of the ACM</span>
+        </div>
+        <p class="coauthor-line"><a href="https://cacm.acm.org/blogcacm/the-hidden-risks-of-url-shortening-in-scientific-review/" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          4 Cybersecurity Insights to Consider While Waiting for Your Next Software Update <span class="pub-venue">World Economic Forum</span>
+        </div>
+        <p class="coauthor-line">with Lars Couwenberg &thinsp;·&thinsp; <a href="https://www.weforum.org/agenda/2024/10/software-updates-cybersecurity-cyber/" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Harnessing Digital Federation Platforms and Data Cooperatives to Empower SMEs and Local Small Communities <span class="pub-venue">Think20 Policy Brief</span>
+        </div>
+        <p class="coauthor-line">with Michael Bühler, Igor Calzada, Isabel Cane, Thorsten Jelinek, Astha Kapoor, Morshed Mannan, Vijay Mookerjee, Konrad Nübel, Alex Pentland, Trebor Scholz, Divya Siddarth, Julian Tait, Bapu Vaitla, and Jianguo Zhu. &thinsp;·&thinsp; <a href="https://t20ind.org/research/harnessing-digital-federation-platforms/" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          The Key to Designing Sustainable Data Cooperatives <span class="pub-venue">World Economic Forum</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande and Liying Mu &thinsp;·&thinsp; <a href="https://www.weforum.org/agenda/2022/02/the-key-to-designing-sustainable-data-cooperatives/" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Can Data Cooperatives Sustain Themselves? <span class="pub-venue">LSE Business Review</span>
+        </div>
+        <p class="coauthor-line">with Milind Dawande and Vijay Mookerjee &thinsp;·&thinsp; <a href="https://blogs.lse.ac.uk/businessreview/2021/08/02/can-data-cooperatives-sustain-themselves/" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          Pricing Policies for Data Monetization <span class="pub-venue">Narrative</span>
+        </div>
+        <p class="coauthor-line"><a href="https://blog.narrative.io/pricing-policies-for-data-monetization" target="_blank" rel="noopener">[link]</a></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── Teaching ──────────────────────────────────────── -->
+
+  <section id="teaching" class="tab-section">
+    <h3>Erasmus University</h3>
+    <ul>
+      <li>Introduction to Mechanism Design (doctoral)</li>
+      <li>Big Data Management and Analytics (master's)</li>
+      <li>Data Privacy and Cybersecurity (master's)</li>
+      <li>Business Analytics for International Managers (master's)</li>
+      <li>Digital Analytics and Customer Insights (executive)</li>
+      <li>Data Modelling &amp; Analytics (bachelor's)</li>
+    </ul>
+
+    <h3>University of Illinois at Urbana-Champaign</h3>
+    <ul>
+      <li>Social Media Strategy (bachelor's)</li>
+    </ul>
+
+    <h3>University of Texas at Dallas</h3>
+    <ul>
+      <li>Introduction to Programming (bachelor's)</li>
+    </ul>
+  </section>
+
+  <!-- ── Honors ─────────────────────────────────────────── -->
+
+  <section id="honors" class="tab-section">
+    <h3>Grants</h3>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">Veni Grant, Dutch Research Council (NWO) — €&thinsp;320,000, 2025–27</div>
+        <p class="coauthor-line">Empowering Individuals in the Digital Economy: A Bottom-Up Approach to Designing an Ethical, Privacy-Preserving, and Viable Data Ecosystem &thinsp;·&thinsp; Principal Investigator</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Market Organization of the Dutch Energy System in 2050, Dutch Research Council (NWO) — €&thinsp;4.28 million, 2025–29</div>
+        <p class="coauthor-line">Co-applicant</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Starter Grant, Erasmus University — €&thinsp;300,000, 2025–27</div>
+        <p class="coauthor-line">Principal Investigator</p>
+      </li>
+    </ul>
+
+    <h3>Awards</h3>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">ERIM Outstanding Performance by a Young Researcher Award</div>
+        <p class="coauthor-line">Erasmus University &thinsp;·&thinsp; 2022</p>
+      </li>
+      <li>
+        <div class="collapsible-header">ERIM High Performance Membership</div>
+        <p class="coauthor-line">Erasmus University &thinsp;·&thinsp; 2021–Present</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Best Dissertation Award</div>
+        <p class="coauthor-line">The University of Texas at Dallas &thinsp;·&thinsp; 2021</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Runner-up, Nunamaker-Chen Dissertation Award</div>
+        <p class="coauthor-line">Information Systems Society, INFORMS &thinsp;·&thinsp; 2020</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Teachers Ranked as Excellent</div>
+        <p class="coauthor-line">University of Illinois at Urbana-Champaign &thinsp;·&thinsp; Fall 2020</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Recipient of INSPIRE Scholarship</div>
+        <p class="coauthor-line">IIT Kanpur &thinsp;·&thinsp; 2008–12</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Ranked 13th in Regional Mathematics Olympiad</div>
+        <p class="coauthor-line">National Board for Higher Mathematics, India &thinsp;·&thinsp; 2006</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Ranked in top 1% in Physics Olympiad</div>
+        <p class="coauthor-line">Indian Association of Physics Teachers, India &thinsp;·&thinsp; 2006</p>
+      </li>
+      <li>
+        <div class="collapsible-header">Recipient of the National Talent Search Scholarship</div>
+        <p class="coauthor-line">NCERT, India &thinsp;·&thinsp; 2005–08</p>
+      </li>
+    </ul>
+  </section>
+
+  </div><!-- /.tab-content -->
+
+</main>
+
+<!-- Back to top -->
+<a id="back-to-top" href="#" aria-label="Back to top">&uarr;</a>
+
+<script>
+  // Tab switching
+  const tabs = document.querySelectorAll('.tab-nav .tab');
+  const sections = document.querySelectorAll('.tab-section');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      const target = this.getAttribute('data-tab');
+
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+
+      sections.forEach(function(s) {
+        s.classList.remove('active');
+        if (s.id === target) {
+          s.classList.add('active');
+        }
+      });
+
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      document.documentElement.style.scrollBehavior = '';
+    });
+  });
+
+  // Combined scroll handler: sticky shadow + back-to-top button
+  const stickyTop = document.querySelector('.sticky-top');
+  const backToTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', function() {
+    stickyTop.classList.toggle('scrolled', window.scrollY > 10);
+    backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>
