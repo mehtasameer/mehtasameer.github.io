@@ -286,13 +286,13 @@ section ul li::marker {
 }
 
 .pub-venue {
-  color: var(--text-muted);
-  background: var(--border-light);
+  color: var(--accent);
+  background: #e8f0fa;
 }
 
 .status-pill {
-  color: var(--accent);
-  background: #e8f0fa;
+  color: var(--text-muted);
+  background: var(--border-light);
 }
 
 /* ── Back to top ──────────────── */
