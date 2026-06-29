@@ -1,0 +1,37 @@
+<svg viewBox="0 0 780 500" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'EB Garamond', Garamond, Georgia, serif">
+  <title>Envelope result: slope of u equals q</title>
+  <desc>The buyer's equilibrium utility is increasing and convex in type; its slope at theta equals the allocation probability q(theta).</desc>
+  <style>
+    text { font-family: 'EB Garamond', Garamond, Georgia, serif; fill: #151515; }
+  </style>
+  <defs>
+    <marker id="axarrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#6a665f"/>
+    </marker>
+  </defs>
+
+  <!-- Axes -->
+  <line x1="90" y1="430" x2="735" y2="430" stroke="#6a665f" stroke-width="1.6" marker-end="url(#axarrow)"/>
+  <line x1="90" y1="430" x2="90" y2="50" stroke="#6a665f" stroke-width="1.6" marker-end="url(#axarrow)"/>
+  <text x="72" y="60" text-anchor="middle" font-size="28" font-style="italic" fill="#6a665f">u</text>
+  <text x="728" y="458" text-anchor="middle" font-size="28" font-style="italic" fill="#6a665f">&#952;</text>
+
+  <!-- Utility curve -->
+  <path d="M130,400 C350,398 540,330 680,90" fill="none" stroke="#2457a6" stroke-width="3"/>
+  <text x="606" y="74" text-anchor="start" font-size="28" fill="#2457a6">u(&#952;)</text>
+
+  <!-- Tangent at theta0 -->
+  <line x1="460" y1="333" x2="640" y2="176" stroke="#c8951f" stroke-width="2.5"/>
+  <circle cx="541" cy="262" r="4.5" fill="#c8951f"/>
+  <text x="560" y="134" text-anchor="middle" font-size="26" fill="#8a6a12">slope = q(&#952;)</text>
+
+  <!-- dashed drop to axis -->
+  <line x1="541" y1="262" x2="541" y2="430" stroke="#b9b3a8" stroke-width="1.4" stroke-dasharray="5 5"/>
+
+  <!-- type ticks -->
+  <line x1="130" y1="425" x2="130" y2="435" stroke="#6a665f" stroke-width="1.4"/>
+  <line x1="680" y1="425" x2="680" y2="435" stroke="#6a665f" stroke-width="1.4"/>
+  <text x="130" y="458" text-anchor="middle" font-size="26" fill="#6a665f">&#952;&#818;</text>
+  <text x="541" y="458" text-anchor="middle" font-size="26" fill="#6a665f">&#952;</text>
+  <text x="680" y="458" text-anchor="middle" font-size="26" fill="#6a665f">&#952;&#773;</text>
+</svg>
