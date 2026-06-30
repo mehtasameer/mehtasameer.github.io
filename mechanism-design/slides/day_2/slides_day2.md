@@ -1,4 +1,4 @@
-	# Mechanism Design
+# Introduction to Mechanism Design
 
 Sameer Mehta | ERIM Summer School 2026 | Day 2
 
