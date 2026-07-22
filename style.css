@@ -22,6 +22,7 @@ html {
 body {
   font-family: Charter, 'Bitstream Charter', Georgia, serif;
   font-weight: 500;
+  -webkit-text-stroke: 0.08px currentColor;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
