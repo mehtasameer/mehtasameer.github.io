@@ -253,7 +253,6 @@ section ul li::marker {
   align-items: baseline;
   gap: 0.6rem;
   padding: 0.45rem 0 0.12rem;
-  user-select: none;
 }
 
 .coauthor-line {
