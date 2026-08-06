@@ -16,13 +16,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 17.5px;
+  font-size: 18px;
 }
 
 body {
   font-family: Charter, 'Bitstream Charter', Georgia, serif;
   font-weight: 500;
-  -webkit-text-stroke: 0.08px currentColor;
+  -webkit-text-stroke: 0.12px currentColor;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -363,7 +363,7 @@ section ul li::marker {
 /* ── Responsive ───────────────── */
 
 @media (max-width: 600px) {
-  html { font-size: 15px; }
+  html { font-size: 15.5px; }
 
   main {
     padding: 0 1rem 2rem;
