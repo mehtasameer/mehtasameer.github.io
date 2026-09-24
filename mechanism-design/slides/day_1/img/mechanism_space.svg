@@ -1,0 +1,27 @@
+<svg viewBox="0 0 1000 740" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'EB Garamond', Garamond, Georgia, serif">
+  <title>The space of selling mechanisms</title>
+  <desc>A large circle of all mechanisms containing disjoint subsets: posted-price, negotiations, auctions, and a smaller amber direct mechanisms circle.</desc>
+  <style>
+    text { font-family: 'EB Garamond', Garamond, Georgia, serif; fill: #151515; }
+  </style>
+
+  <!-- Big circle: all mechanisms -->
+  <circle cx="500" cy="390" r="335" fill="#f7f6f3" stroke="#b9b3a8" stroke-width="2"/>
+  <text x="500" y="135" text-anchor="middle" font-size="32" font-weight="700" fill="#6a665f">All mechanisms</text>
+
+  <!-- Family circles (indirect mechanisms) -->
+  <circle cx="335" cy="345" r="100" fill="#e3ebf6" stroke="#2457a6" stroke-width="2"/>
+  <text x="335" y="338" text-anchor="middle" font-size="26">Posted-</text>
+  <text x="335" y="368" text-anchor="middle" font-size="26">price</text>
+
+  <circle cx="665" cy="320" r="100" fill="#e3ebf6" stroke="#2457a6" stroke-width="2"/>
+  <text x="665" y="329" text-anchor="middle" font-size="26">Negotiations</text>
+
+  <circle cx="445" cy="535" r="102" fill="#e3ebf6" stroke="#2457a6" stroke-width="2"/>
+  <text x="445" y="544" text-anchor="middle" font-size="26">Auctions</text>
+
+  <!-- Direct mechanisms: the highlighted, smallest set (contrasting amber) -->
+  <circle cx="690" cy="525" r="90" fill="#f6d98a" stroke="#c8951f" stroke-width="2"/>
+  <text x="690" y="518" text-anchor="middle" font-size="24" font-weight="700" fill="#5c4302">Direct</text>
+  <text x="690" y="548" text-anchor="middle" font-size="24" font-weight="700" fill="#5c4302">mechanisms</text>
+</svg>
