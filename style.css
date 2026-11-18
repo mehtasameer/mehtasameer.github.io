@@ -272,11 +272,6 @@ section ul li::marker {
   display: block;
 }
 
-.course-lectures {
-  font-size: 0.9rem;
-  padding: 0 0 0.45rem;
-}
-
 .inline-muted {
   color: var(--text-muted);
   font-size: 0.9rem;
